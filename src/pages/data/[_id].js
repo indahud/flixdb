@@ -88,7 +88,7 @@ export default function GetMoviesorTvWithId({ data }) {
                 </h2>
                 <div className="flex items-center mb-1">
                   <dt className="text-sm font-medium text-gray-500">
-                    Categories
+                    Cast
                   </dt>
                 </div>
                 {data.cast === '' ? 'NA' : data.cast}

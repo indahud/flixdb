@@ -1,4 +1,6 @@
 import axios from 'axios';
+import Link from 'next/link';
+
 
 export default function SearchList({ data }) {
   return (
@@ -14,12 +16,9 @@ export default function SearchList({ data }) {
                 <article className="overflow-hidden rounded-xl shadow-lg border border-gray-300">
                   <header className="border-b-2 border-gray-100 flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 className="text-lg">
-                      <a
-                        className="no-underline hover:underline text-black"
-                        href="#"
-                      >
-                        {list.title}
-                      </a>
+                      <Link href={`/data/${list._id}`} className="no-underline hover:underline text-black">
+                          {list.title}
+                      </Link>
                     </h1>
                     <p className="text-white-darker text-sm rounded bg-slate-400 p-1">
                       {list.date_added}
